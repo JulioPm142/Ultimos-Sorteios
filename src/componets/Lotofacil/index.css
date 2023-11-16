@@ -1,0 +1,99 @@
+.container-loto{
+    background-color: orange;
+    display:flex;
+    border-bottom:1px solid #ddd;
+    padding: 30px, 0px;
+    font-family: Roboto;
+}
+
+#loto-bloco-principal{
+    background-color: rgba(255, 0, 255, 0);
+    display:flex;
+    border-bottom:1px solid #ddd;
+    padding: 30px, 0px;
+    font-family: Roboto;   
+}
+
+#loto-bloco-principal {
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0px;
+    font-family: Roboto;
+    display: flex;
+}
+
+#loto-bloco-loteria {
+    display:flex;
+}
+
+#loto-nome-loteria {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #862098;
+}
+
+#loto-bloco-estimativa {
+    width: 15rem;
+    margin-left: 45px;
+    margin-top: 20px;
+}
+
+#loto-texto-estimativa {
+    font-size: 0.9rem;
+    color: rgb(108, 76, 105);   
+}
+
+#loto-valor-estimativa {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 15px;
+    color: rgb(152, 32, 152);  
+}
+
+#loto-bloco-direita {
+    margin-left: 50px;
+}
+
+#loto-linha-bola {
+    display: flex;
+    flex-wrap: wrap;
+    width: 27vw;
+    height: auto;
+}
+
+.loto-bola {
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+    border-radius: 0.3rem;
+    width: 2vw;
+    height: 2vw;
+
+}
+
+.loto-bola-text {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #962098;
+    width: 2vw;
+    height: 2vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loto-texto-acumulou {
+    padding-left: 10px;
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0066b3;
+}
+
+#loto-data-concurso {
+    padding-left: 10px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #4c556c;  
+}

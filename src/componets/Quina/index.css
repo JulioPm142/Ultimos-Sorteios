@@ -1,0 +1,79 @@
+#quina-bloco-principal {
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0px;
+    font-family: Roboto;
+    display: flex;
+}
+
+#quina-bloco-loteria {
+    display:flex;
+}
+
+#quina-nome-loteria {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #260085;
+}
+
+#quina-bloco-estimativa {
+    width: 15rem;
+    margin-left: 45px;
+    margin-top: 20px;
+}
+
+#quina-texto-estimativa {
+    font-size: 0.9rem;
+    color: #4c556c;   
+}
+
+#quina-valor-estimativa {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #242098;  
+}
+
+#quina-bloco-direita {
+    margin-left: 50px;
+}
+
+#quina-linha-bola {
+    display: flex;
+}
+
+.quina-bola {
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 5.2rem;
+    background-color: #4a2098;
+    width: 2vw;
+    height: 2vw;
+    
+}
+
+.quina-bola-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color:#fff;
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quina-texto-acumulou {
+    padding-left: 10px;
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0066b3;
+}
+
+#quina-data-concurso {
+    padding-left: 10px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #4c556c;  
+}
