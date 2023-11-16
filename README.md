@@ -2,11 +2,11 @@ Descrição da atividade: fazer um aplicativo web para mostrar os dados do últi
 Timemania, sendo cada sorteio em uma página distinta acessível pelas rotas /megasena, /quina e /timemania,
 respectivamente. A página deverá ser organizada em componentes estilizados usando styled-components.
 
-Objetivos:
-• React TS, requisições HTTP, contexto, hooks e rotas;
-• CSS, styled-components e temas.
-
-git clone https://github.com/JulioPm142/Ultimos-Sorteios
-cd Ultimos-Sorteios
-npm install
+Objetivos:<br/>
+• React TS, requisições HTTP, contexto, hooks e rotas;<br/>
+• CSS, styled-components e temas.<br/>
+<br/><br/><br/>
+git clone https://github.com/JulioPm142/Ultimos-Sorteios<br/>
+cd Ultimos-Sorteios<br/>
+npm install<br/>
 npm start
