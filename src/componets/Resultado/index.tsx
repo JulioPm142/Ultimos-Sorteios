@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import useContexto from "../../hooks/useContexto";
-import { mega } from "../../styles/theme";
+import { mega, quinaStyle, time } from "../../styles/theme";
 
 interface Props {
   dezenas: any[];
@@ -28,15 +28,35 @@ function Resultado(props: Props) {
   );
 }
 
-const Index = () => {
-  const { megasena } = useContexto();
-  const theme = mega;
+const Index = ({loteria}:{loteria:string}) => {
 
-  if (!megasena || !megasena.dezenas || megasena.dezenas.length === 0) {
+  let theme = null;
+  
+  const { megasena } = useContexto();
+  const { timemania } = useContexto();
+  const { quina } = useContexto();
+  var Loteria = megasena
+
+  if (loteria=='Mega-Sena'){
+      theme = mega;
+      Loteria = megasena;
+    }
+  
+    if (loteria=='Timemania'){
+      theme = time;
+      Loteria = timemania;
+    }
+  
+    if (loteria=='Quina'){
+      theme = quinaStyle;
+      Loteria = quina;
+    }
+
+  if (!Loteria || !Loteria.dezenas || Loteria.dezenas.length === 0) {
     return <div>Nenhuma dezena disponível</div>;
   }
 
-  return <Resultado dezenas={megasena.dezenas} theme={theme} />;
+  return <Resultado dezenas={Loteria.dezenas} theme={theme} />;
 };
 
 const LinhaBola = styled.div`

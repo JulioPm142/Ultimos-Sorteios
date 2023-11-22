@@ -6,12 +6,12 @@ import NomeLote from '../NomeLoteria';
 import Estimativa from '../Estimativa';
 
 
-const index = () => {
+const index = ({loteria}:{loteria:string}) => {
 	return (
 		<>
 			<Esquerda>
-				<NomeLote />
-				<Estimativa/>
+				<NomeLote loteria={loteria}/>
+				<Estimativa loteria={loteria}/>
 			</Esquerda>
 		</>
 	);

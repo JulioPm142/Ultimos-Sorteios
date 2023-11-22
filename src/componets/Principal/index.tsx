@@ -4,13 +4,14 @@ import Esquerda from '../Esquerda';
 import Direita from '../Direita';
 
 
-const  index = () => {
+const  index = ({loteria}:{loteria:string}) => {
     return (
         <>
             <BlocoPrincipal>
-                <Esquerda/>
-                <Direita/>
+                <Esquerda loteria={loteria}/>
+                <Direita loteria={loteria}/>
             </BlocoPrincipal>
+            
         </>
     );
 }

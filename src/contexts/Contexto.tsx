@@ -9,6 +9,7 @@ function Provider({ children }: any) {
     const [megasena, setMegasena] = useState({} as Props)
     const [lotofacil, setLotofacil] = useState({} as Props)
     const [quina, setQuina] = useState({} as Props)
+    const [timemania, setTime] = useState({} as Props)
 
     useEffect(
         function () {
@@ -17,11 +18,12 @@ function Provider({ children }: any) {
                 setMegasena(data.megasena); 
                 setLotofacil(data.lotofacil);
                 setQuina(data.quina) 
+                setTime(data.timemania)
             })
         }
         , [])
     return (
-        <Contexto.Provider value={{ megasena, lotofacil,quina }}>
+        <Contexto.Provider value={{ megasena, lotofacil,quina,timemania }}>
             {children}
         </Contexto.Provider>
     );

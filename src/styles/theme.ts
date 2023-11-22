@@ -7,7 +7,7 @@ const mega = {
     bolafonte: "#fff"
     };
 
-    const quina = {
+    const quinaStyle = {
     acumulou: "#0066b3",
     data: "#4c556c",
     estimativa: "#260085",
@@ -16,7 +16,7 @@ const mega = {
     bolafonte: "#fff"
     };
 
-    const timemania = {
+    const time = {
     acumulou: "#0066b3",
     data: "#4c556c",
     estimativa: "#00ff48",
@@ -26,8 +26,8 @@ const mega = {
     };
     
     export {
-    timemania,
+    time,
     mega,
-    quina
+    quinaStyle
     };
     

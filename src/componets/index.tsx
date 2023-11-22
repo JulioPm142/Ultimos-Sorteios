@@ -3,10 +3,12 @@ import React from "react";
 import styled from "styled-components";
 import Principal from './Principal'
 
-const  index = () => {
+const  index = ({loteria}:{loteria:string}) => {
+
     return (
         <>
-            <Principal/>
+            <Principal loteria={loteria}/>
+            
         </>
     );
 }

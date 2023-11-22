@@ -8,13 +8,13 @@ import Data from "../Data"
 
 
 
-const index = () => {
+const index = ({loteria}:{loteria:string}) => {
 	return (
 		<>
 			<Direita>
-				<Resultado/>
-				<Acumulou/>
-				<Data/>
+				<Resultado loteria={loteria}/>
+				<Acumulou loteria={loteria}/>
+				<Data loteria={loteria}/>
 			</Direita>
 		</>
 	);

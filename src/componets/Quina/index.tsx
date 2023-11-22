@@ -3,6 +3,7 @@ import useContexto from "../../hooks/useContexto";
 import trevo from '../../assets/trevo-quina.png'
 import { type } from "os";
 import React from "react";
+import './index.css'
 
 function Quinasena() {
     const { quina } = useContexto();

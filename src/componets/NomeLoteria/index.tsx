@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { mega, quina, timemania } from "../../styles/theme";
+import { mega, quinaStyle, time } from "../../styles/theme";
 import trevoL from "../../assets/trevo-lotofacil.png";
 import trevoM from "../../assets/trevo-megasena.png";
 import trevoQ from "../../assets/trevo-quina.png";
+import trevoT from "../../assets/trevo-timemania.png";
 
 interface Props {
   theme: any;
@@ -20,17 +21,28 @@ function LoteriaNome(props: Props) {
   );
 }
 
-const Index = () => {
+const Index = ({loteria}:{loteria:string}) => {
 
-  const theme = mega;
+  let theme = null;
 
+  if (loteria=='Mega-Sena'){
+    theme = mega;
+  }
 
-  const trevo = theme === mega ? trevoM : theme === quina ? trevoQ : trevoL;
+  if (loteria=='Timemania'){
+    theme = time;
+  }
+
+  if (loteria=='Quina'){
+    theme = quinaStyle;
+  }
+
+  const trevo = theme === mega ? trevoM : theme === quinaStyle ? trevoQ :theme === time ? trevoT :  trevoL;
 
   return (
     <>
       <Container>
-        <LoteriaNome nome="Mega Sena" theme={theme} trevo={trevo} />
+        <LoteriaNome nome={loteria} theme={theme} trevo={trevo} />
       </Container>
     </>
   );

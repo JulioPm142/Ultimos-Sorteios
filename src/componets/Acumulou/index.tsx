@@ -1,52 +1,72 @@
 import React from "react";
-import { type } from "os";
 import styled from "styled-components";
 import useContexto from "../../hooks/useContexto";
-import { mega } from "../../styles/theme"
-
+import { mega, quinaStyle, time } from "../../styles/theme";
 
 interface Props {
-    theme: any; // ajuste conforme necessário
-    texto: any;
+  theme: any;
 }
 
+function Acumulou({ theme }: Props) {
+  const { megasena, timemania, quina } = useContexto();
+  let Loteria = megasena;
 
+  if (theme === mega) {
+    Loteria = megasena;
+  }
 
-function Acumulou(props: Props) {
-    const { megasena } = useContexto();
+  if (theme === time) {
+    Loteria = timemania;
+  }
 
+  if (theme === quinaStyle) {
+    Loteria = quina;
+  }
 
-    return (
-        <>
-            <TextoAcumulou theme={props.theme}>
-                {megasena.quantidadeGanhadores === 0 ?
-                    "ACUMULOU!"
-                    :
-                    `${megasena.quantidadeGanhadores} Ganhadores`}
-
-            </TextoAcumulou>
-
-        </>
-    );
+  return (
+    <>
+      <TextoAcumulou theme={theme}>
+        {Loteria.quantidadeGanhadores === 0
+          ? "ACUMULOU!"
+          : `${Loteria.quantidadeGanhadores} Ganhadores`}
+      </TextoAcumulou>
+    </>
+  );
 }
 
-const Index = () => {
-    const { megasena } = useContexto();
-    const theme = mega;
+const Index = ({ loteria }: { loteria: string }) => {
+  const { megasena, timemania, quina } = useContexto();
+  let theme = null;
+  let Loteria = megasena;
 
-    return (
-        <>
-            <Acumulou texto={megasena.quantidadeGanhadores} theme={theme} />
-        </>
-    )
-};
+  if (loteria === 'Mega-Sena') {
+    theme = mega;
+    Loteria = megasena;
+  }
+
+  if (loteria === 'Timemania') {
+    theme = time;
+    Loteria = timemania;
+  }
+
+  if (loteria === 'Quina') {
+    theme = quinaStyle;
+    Loteria = quina;
+  }
+
+  return (
+    <>
+      <Acumulou theme={theme} />
+    </>
+  );
+}
 
 const TextoAcumulou = styled.div`
-    padding-left: 10px;
-    margin-top: 15px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: ${(props) => props.theme?.acumulou};
-`
+  padding-left: 10px;
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: ${(props) => props.theme?.acumulou};
+`;
 
 export default Index;

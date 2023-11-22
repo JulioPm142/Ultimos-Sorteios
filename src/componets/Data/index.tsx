@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import useContexto from "../../hooks/useContexto";
-import { mega } from "../../styles/theme";
+import { mega, quinaStyle, time } from "../../styles/theme";
 
 interface Props {
   theme: any; // ajuste conforme necessário
@@ -19,13 +19,33 @@ function Data(props: Props) {
   );
 }
 
-const Index = () => {
+const Index = ({loteria}:{loteria:string}) => {
+
+  let theme = null;
+    
   const { megasena } = useContexto();
-  const theme = mega;
+  const { timemania } = useContexto();
+  const { quina } = useContexto();
+  var Loteria = megasena
+
+  if (loteria=='Mega-Sena'){
+      theme = mega;
+      Loteria = megasena;
+    }
+  
+    if (loteria=='Timemania'){
+      theme = time;
+      Loteria = timemania;
+    }
+  
+    if (loteria=='Quina'){
+      theme = quinaStyle;
+      Loteria = quina;
+    }
 
   return (
     <>
-      <Data numero={megasena.numeroDoConcurso} dataExtenso={megasena.dataPorExtenso} theme={theme} />
+      <Data numero={Loteria.numeroDoConcurso} dataExtenso={Loteria.dataPorExtenso} theme={theme} />
     </>
   );
 };

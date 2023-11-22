@@ -2,6 +2,7 @@ export interface LoteriaProps{
     lotofacil:Props;
     megasena:Props;
     quina:Props;
+    timemania:Props;
 }
 
 export interface Props{
